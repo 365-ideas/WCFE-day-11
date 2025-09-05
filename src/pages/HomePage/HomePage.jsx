@@ -126,7 +126,7 @@ export default function HomePage() {
               "image--active": activeItem === null,
             })}
           >
-            <Image src="/images/list/default.webp" fill alt="" />
+            <Image src="/images/list/default.jpg" fill alt="" />
           </div>
           {list.map((item, index) => (
             <div
