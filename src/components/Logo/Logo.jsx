@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export const Logo = ({color="black", ...rest}) => {
   return (
-    <motion.div {...rest}>
+    <motion.div {...rest} style={{ position: 'relative' }}>
       <Image
         src={`/images/FullLogo-${color}.svg`}
         fill
@@ -19,7 +19,7 @@ export const Logo = ({color="black", ...rest}) => {
 
 export const LogoSmall = ({color="black", ...rest}) => {
   return (
-    <motion.div {...rest}>
+    <motion.div {...rest} style={{ position: 'relative' }}>
       <Image
         src={`/images/OneLogo-${color}.svg`}
         fill

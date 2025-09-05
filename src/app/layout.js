@@ -1,46 +1,35 @@
-import { useContext } from "react";
 import localFont from "next/font/local";
 import "@/styles/reset.scss";
-import { LoaderProvider } from "@/providers/LoaderProvider/LoaderProvider";
 import { Root } from "./root";
 import { ResponceBlocker } from "@/components/ResponceBlocker/ResponceBlocker";
 
-const inter = localFont({
+const sfPro = localFont({
   src: [
     {
-      path: "./fonts/Inter_Regular.ttf",
+      path: "./fonts/SFPRODISPLAYREGULAR.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/Inter_ExtraBold.ttf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Inter_Bold.ttf",
+      path: "./fonts/SFPRODISPLAYMEDIUM.otf",
       weight: "700",
       style: "normal",
-    },
+    }
   ],
-  variable: "--font-inter",
+  variable: "--font-sf-pro",
 });
 
 export const metadata = {
   title: "We're Creating For Emotions",
-  description: "Day # | We're Creating For Emotions",
+  description: "Day 11 | We're Creating For Emotions",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html className="html" lang="en">
-      <body className={`body ${inter.variable}`}>
-        <LoaderProvider>
-          <ResponceBlocker />
-          <Root>
-            {children}
-          </Root>
-        </LoaderProvider>
+      <body className={`body ${sfPro.variable}`}>
+        <ResponceBlocker />
+        <Root>{children}</Root>
       </body>
     </html>
   );

@@ -1,27 +1,48 @@
 @import "./mixins";
 
-%h1 {
-  font-family: var(--font-inter), sans-serif;
-  font-size: VW(60);
+.super-text {
+  font-family: var(--font-sf-pro), sans-serif;
   font-style: normal;
-  font-weight: bold;
-  line-height: 142%;
-  text-transform: uppercase;
-  letter-spacing: normal;
+  font-weight: 510;
+  font-size: VW(272);
+  line-height: 86%;
+  letter-spacing: -0.075em;
+}
+
+%h1 {
+  font-family: var(--font-sf-pro), sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: VW(36);
+  line-height: 80%;
+  letter-spacing: -0.035em;
+  font-variant: all-small-caps;
 }
 
 %body-text {
-  font-family: var(--font-inter), sans-serif;
-  font-size: VW(20);
+  font-family: var(--font-sf-pro), sans-serif;
+  font-style: normal;
+  font-weight: 510;
+  font-size: VW(24);
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+.small-text {
   font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-  letter-spacing: -0.06vw;
+  font-size: VW(16);
+  line-height: 100%;
+  letter-spacing: -0.001em;
 }
 
 %link {
   @extend %body-text;
   font-weight: bold;
+}
+
+.regular {
+  font-weight: 400;
 }
 
 .bold {

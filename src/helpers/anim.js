@@ -1,3 +1,4 @@
+import { filter } from "framer-motion/client";
 import { ease } from "./ease";
 
 export const anim = (variants) => {
@@ -9,23 +10,36 @@ export const anim = (variants) => {
   };
 };
 
-export const LoaderAnim = {
-  wrapper: {
+export const TitleTransition = {
+  title: {
     initial: {
-      opacity: 1
+      opacity: 0,
+      y: "20%",
+      filter: "blur(1vw)",
     },
     animate: {
       opacity: 1,
+      y: 0,
+      filter: "blur(0vw)",
+      transition: {
+        duration: 1,
+        ease: ease.outExpo,
+      },
     },
     exit: {
       opacity: 0,
+      y: "-20%",
+      filter: "blur(1vw)",
       transition: {
-        delay: 1,
-        duration: .5,
-      }
-    }
+        duration: 1,
+        ease: ease.outExpo,
+      },
+      transitionEnd: {
+        y: "20%",
+      },
+    },
   },
-  logo: {
+  text: {
     initial: {
       opacity: 0,
       filter: "blur(1vw)",
@@ -34,11 +48,17 @@ export const LoaderAnim = {
       opacity: 1,
       filter: "blur(0vw)",
       transition: {
-        duration: .5
-      }
+        duration: 1,
+        ease: ease.outExpo,
+      },
     },
     exit: {
-      opacity: 1,
-    }
-  }
-}
+      opacity: 0,
+      filter: "blur(1vw)",
+      transition: {
+        duration: 1,
+        ease: ease.outExpo,
+      },
+    },
+  },
+};
